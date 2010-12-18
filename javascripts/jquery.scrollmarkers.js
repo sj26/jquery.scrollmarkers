@@ -27,9 +27,10 @@
     init: function() {
       var self = this;
       this.marker = $('<div class="scrollmarker"></div>')
-        .text(this.place.text())
+        .html(this.options.markerContent || this.place.data('scrollmarker-content') || this.place.html())
         .appendTo(this.place.parent('body'))
         .click(function() { self.show(); })
+        .addClass(this.options.markerClass || this.place.data('scrollmarker-class'))
       $(window).resize(function() { self.position(); });
       this.position();
       // TODO: listen to dom changes around .place and ajust marker

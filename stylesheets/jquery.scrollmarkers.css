@@ -1,2 +1,4 @@
 .scrollmarker { background: red; width: 10px; height: 1em; padding: .25em; cursor: pointer; overflow: hidden; text-indent: 1.5em; }
-.scrollmarker:hover {  width: auto; text-indent: 0; }
+.scrollmarker:hover { width: auto; text-indent: 0; }
+.scrollmarker.title { background: green; }
+.scrollmarker.discussion { background: purple; }
